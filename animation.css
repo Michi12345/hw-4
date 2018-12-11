@@ -1,0 +1,26 @@
+@keyframes colors-of-gray {
+    from {
+        background: #a8a8a8;
+    }
+    50% {
+        background: #d0d0d0;
+    }
+    to {
+        background: #fcfcfc;
+    }
+}
+
+@keyframes colorful-elements {
+    from {
+        background: #f00;
+        color: #00f;
+    }
+    50% {
+        background: #00f;
+        color: #ff0;
+    }
+    to {
+        background: #ff0;
+        color: #f00;
+    }
+}

@@ -1,0 +1,190 @@
+@import "animation.css";
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    margin: 0;
+    perspective: 1500px;
+}
+
+#root {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 130px);
+    grid-template-rows: repeat(8, 90px);
+}
+
+#root div {
+    border: 1px solid #000;
+    background: #a8a8a8;
+    box-sizing: border-box;
+    animation-name: colors-of-gray;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#root div:nth-child(2n) {
+    animation-delay: 0s;
+}
+
+#root div:nth-child(3n) {
+    animation-delay: .3s;
+}
+
+#root div:nth-child(5n) {
+    animation-delay: .25s;
+}
+
+#root div:nth-child(7n) {
+    animation-delay: .75s;
+}
+
+.front {
+    padding: 25px 0;
+}
+
+.photo-front {
+    padding: 0 45px;
+}
+
+#root .front:hover {
+    animation-name: colorful-elements;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+#root .photo-front:hover {
+    animation-name: colorful-elements;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.main-container {
+    grid-area: 4/2/5/4;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2em;
+    border: none;
+    width: 260px;
+    height: 90px;
+    transform-style: preserve-3d;
+}
+
+.main-side {
+    position: absolute;
+    width: 260px;
+    height: 90px;
+}
+
+.main-container:hover .front {
+    transform: translateZ(100px);
+    box-shadow: 0 0 134px 8px rgba(0, 0, 0, 0.95);
+}
+
+.main-container:hover .main-right {
+    transform-origin: right;
+    transform: translateX(161px) rotateY(89deg);
+    width: 100px;
+    height: 89px;
+}
+
+.photo-container {
+    grid-area: 3/5/6/6;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.8em;
+    border: none;
+    width: 131px;
+    height: 361px;
+    transform-style: preserve-3d;
+}
+
+.photo-side {
+    position: absolute;
+    width: 130px;
+    height: 359px;
+}
+
+.photo-container:hover .photo-front {
+    transform: translateZ(100px);
+    box-shadow: 0 0 134px 8px rgba(0, 0, 0, 0.95);
+}
+
+.photo-container:hover .photo-right {
+    transform-origin: right;
+    transform: translateX(-110px) rotateY(89deg);
+    width: 110px;
+    height: 359px;
+}
+
+.portfolio-container {
+    grid-area: 6/9/7/7;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2em;
+    border: none;
+    width: 260px;
+    height: 90px;
+    transform-style: preserve-3d;
+}
+
+.portfolio-side {
+    position: absolute;
+    width: 259px;
+    height: 89px;
+}
+
+.portfolio-container:hover .front {
+    transform: translateZ(100px);
+    box-shadow: 0 0 134px 8px rgba(0, 0, 0, 0.95);
+}
+
+.portfolio-container:hover .portfolio-top {
+    transform-origin: top;
+    transform: translateY(0px) rotateX(89deg);
+    width: 261px;
+    height: 96px;
+}
+
+.contacts-container {
+    grid-area: 4/11/5/9;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2em;
+    border: none;
+    width: 260px;
+    height: 90px;
+    transform-style: preserve-3d;
+}
+
+.contacts-side {
+    position: absolute;
+    width: 259px;
+    height: 89px;
+}
+
+.contacts-container:hover .front {
+    transform: translateZ(100px);
+    box-shadow: 0 0 134px 8px rgba(0, 0, 0, 0.95);
+}
+
+.contacts-container:hover .contacts-left {
+    transform-origin: left;
+    transform: rotateY(-89deg);
+    width: 90px;
+    height: 89px;
+}
